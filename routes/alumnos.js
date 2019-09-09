@@ -5,13 +5,13 @@ const router = Router();
 
 const Alumno = require('../models/Alumno');
 
-router.get('/', async (req, res) => {
+router.get('*', async (req, res) => {
     //Ordenando datos sort: 1-Asc.  -1:Desc
     const alumnos = await Alumno.find().sort('-_id');
     res.json(alumnos);
 });
 
-router.post('/', async (req, res) => {
+router.post('*', async (req, res) => {
     const { nombre, apellidos, edad } = req.body;
     const newAlumno = new Alumno({nombre, apellidos, edad});
     console.log(newAlumno)
