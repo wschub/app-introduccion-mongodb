@@ -26,6 +26,12 @@ router.delete('/:id', async (req, res) => {
 });
 
 
+router.put('/:id',async (req,res)=>{
+    res.json({
+        message:'put test...'
+    });
+});
+
 /*router.put('/:id',async (req,res) => {
     console.log('put...');
 
