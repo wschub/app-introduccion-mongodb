@@ -8,7 +8,7 @@ const app = express();
 require('./db');
 
 // settings
-app.set('port', process.env.PORT || 4000);
+app.set('port', process.env.PORT || 5000);
 
 // middlewares
 app.use(morgan('dev'));
